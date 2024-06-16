@@ -1,0 +1,9 @@
+---
+- name: jinja2 template test 2
+  hosts: all
+  tasks:
+    - name: create /etc/motd
+      template:
+        src: ./motd.j2
+        dest: /etc/motd
+        mode: 0644
