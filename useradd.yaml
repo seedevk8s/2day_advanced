@@ -1,0 +1,11 @@
+---
+- name: create user by ansible-vault
+  hosts: all
+  vars_files:
+    - pw.yaml
+  tasks:
+    - name: craete user
+      user:
+        name: "{{ id }}"
+        group: wheel
+        password: "{{ password | string | password_hash('sha512') }}"

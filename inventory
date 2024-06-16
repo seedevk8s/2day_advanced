@@ -1,0 +1,9 @@
+[websvr]
+servera.test.com
+serverb.test.com
+
+[timesvr]
+serverc.test.com
+
+[db]
+serverd.test.com
