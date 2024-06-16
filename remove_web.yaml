@@ -1,0 +1,10 @@
+---
+- name: remove web server
+  hosts: all
+  tasks:
+    - name: stop web service
+      service:
+
+    - name: remove web pkg
+      dnf:
+        
