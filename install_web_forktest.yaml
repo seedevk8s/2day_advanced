@@ -1,0 +1,14 @@
+---
+- name: install web svr
+  hosts: all
+  tasks:
+    - name: using dnf
+      dnf: 
+        name: httpd
+        state: latest
+
+    - name: start web service
+      service:
+        name: httpd
+        state: start
+        enabled: yes    
