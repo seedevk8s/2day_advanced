@@ -1,6 +1,7 @@
 ---
 - name: install web svr
   hosts: all
+  serial: 3
   tasks:
     - name: using dnf
       dnf:
