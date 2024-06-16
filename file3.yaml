@@ -1,0 +1,12 @@
+---
+- name: insert 1 line to file
+  hosts: servera.test.com
+  tasks:
+    - name: 1 line to a.txt
+      lineinfile:
+        path: /sunday/a.txt
+        regexp: '^10\.1\.1\.1'
+        line: 127.0.0.1 localhost
+        owner: guru
+        group: wheel
+        mode: '0644'
