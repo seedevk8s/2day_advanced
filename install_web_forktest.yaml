@@ -6,8 +6,11 @@
       dnf: 
         name: httpd
         state: latest
+      notify:
+        - start_web  
 
-    - name: start web service
+  handlers:  
+    - name: start_web 
       service:
         name: httpd
         state: start
