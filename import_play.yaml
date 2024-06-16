@@ -1,1 +1,9 @@
 ---
+- name: import playbook example
+  hosts: localhost
+  tasks:
+    - name: task 1
+      debug: 
+        msg: 'i am main-playbook'
+- import_playbook: aplay.yaml
+- import_playbook: ablay.yaml
