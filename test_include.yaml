@@ -8,6 +8,11 @@
 
     - name: include task 
       include_tasks: install_web_task.yaml
-      when:
+      when: ansible_facts.os_family == "Windows"
+
+    - name: third task 
+      debug:
+        msg: 3th task   
+
 
 
