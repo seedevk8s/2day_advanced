@@ -1,0 +1,13 @@
+---
+- name: blockinfile example
+  hosts: servera.test.com
+  tasks:
+    - name: insert text block 
+      blockinfile:
+        path: /sunday/a.txt
+        block: |
+          10.1.1.1  www.test.com
+          10.1.1.2  mail.test.com
+          10.1.1.3  db.test.com
+        state: present
+                  
