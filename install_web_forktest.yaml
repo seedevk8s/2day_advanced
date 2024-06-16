@@ -3,15 +3,16 @@
   hosts: all
   tasks:
     - name: using dnf
-      dnf: 
+      dnf:
         name: httpd
         state: latest
       notify:
-        - start_web  
+        - start_web
 
-  handlers:  
-    - name: start_web 
+
+  handlers:
+    - name: start_web
       service:
         name: httpd
-        state: start
-        enabled: true    
+        state: started
+        enabled: true
