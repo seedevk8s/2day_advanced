@@ -1,6 +1,6 @@
 ---
-- name: servera playbook
-  hosts: servera.test.com
+- name: serverb playbook
+  hosts: serverb.test.com
   tasks:
     - name: print ip addr
       debug:
