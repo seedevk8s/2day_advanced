@@ -1,1 +1,13 @@
 ---
+- name: import task example
+  hosts: servera.test.com
+  tasks:
+    - name: 1st task
+      debug:
+        msg: "this is 1st TASK"
+
+    - import_tasks: install_web_task.yaml
+
+    - name: 3st task 
+      debug:
+        msg: '3st TASK!!'    

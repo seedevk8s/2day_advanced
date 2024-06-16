@@ -1,0 +1,10 @@
+- name: install web pkg 
+  dnf:
+    name: httpd
+    state: latest
+
+- name: start_web service
+  service:
+    name: httpd
+    state: started
+    enabled: true
