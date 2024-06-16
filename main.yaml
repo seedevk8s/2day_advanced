@@ -4,5 +4,6 @@
   gather_facts: false
   tasks:
     - name: import 1
-      import_tasks: other_task.yaml
+      #import_tasks: other_task.yaml
+      include_tasks: other_task.yaml
       when: myval is not defined 
