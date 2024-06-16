@@ -1,1 +1,8 @@
 ---
+- name: set a variable
+  set_fact:
+    myval: docker
+
+- name: print variable
+  debug:
+    var: myval     
