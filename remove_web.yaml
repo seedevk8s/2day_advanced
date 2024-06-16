@@ -4,7 +4,11 @@
   tasks:
     - name: stop web service
       service:
+        name: httpd
+        state: stopped
+        enabled: no
 
     - name: remove web pkg
       dnf:
-        
+        name: httpd
+        state: absent
