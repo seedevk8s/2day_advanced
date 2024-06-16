@@ -3,7 +3,9 @@
   hosts: localhost
   tasks:
     - name: task 1
-      debug: 
+      debug:
         msg: 'i am main-playbook'
+
+
 - import_playbook: aplay.yaml
-- import_playbook: ablay.yaml
+- import_playbook: bplay.yaml       
