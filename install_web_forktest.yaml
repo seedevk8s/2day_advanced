@@ -11,4 +11,4 @@
       service:
         name: httpd
         state: start
-        enabled: yes    
+        enabled: true    
