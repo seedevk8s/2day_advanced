@@ -1,0 +1,13 @@
+---
+- name: include example 2
+  hosts: serverc.test.com
+  tasks:
+    - name: first task 
+      debug:
+        msg: 1st task 
+
+    - name: include task 
+      include_tasks: install_web_task.yaml
+      when:
+
+
